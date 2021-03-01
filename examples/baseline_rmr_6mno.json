@@ -19,7 +19,7 @@
                                             {
                                                 "id": "Space ID 1",
                                                 "name": "Space Name 1",
-                                                "area": "1000 ft2",
+                                                "floor_area": 1000,
                                                 "contruction_type": "New",
                                                 "is_lighting_designed": true,
                                                 "lighting_space_type": "enclosed office",
