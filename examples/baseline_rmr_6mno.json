@@ -1,0 +1,31 @@
+{
+    "rule": "6mno",
+    "test_case": "Baseline",
+    "description": "Performance Rating Method Lighting Power Density Allowances and Occupancy Sensor Reductions Using the Space-by-Space Method",
+    "Buildings": [
+        {
+            "id": "Building ID 1",
+            "name": "Building Name 1",
+            "is_all_new": true,
+            "BuildingSegments": [
+                {
+                    "Zones": [
+                        {
+                            "Spaces": [
+                                {
+                                    "id": "Space ID 1",
+                                    "name": "Space Name 1",
+                                    "area": "1000 ft2",
+                                    "contruction_type": "New",
+                                    "is_lighting_designed": true,
+                                    "lighting_space_type": "enclosed office",
+                                    "interior_lighting_power": 1100
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
