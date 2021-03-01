@@ -1,0 +1,431 @@
+{
+    "G3.7": {
+        "description": "Performance Rating Method Lighting Power Density Allowances and Occupancy Sensor Reductions Using the Space-by-Space Method",
+        "Lighting Space Type": {
+            "Audience Seating Area-Auditorium": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Convention center": {
+                "Lighting Power Density, W/ft2": 0.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Exercise center": {
+                "Lighting Power Density, W/ft2": 0.3,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Gymnasium": {
+                "Lighting Power Density, W/ft2": 0.4,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Motion picture theater": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Penitentiary": {
+                "Lighting Power Density, W/ft2": 0.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Performing arts theater": {
+                "Lighting Power Density, W/ft2": 2.6,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Religious facility": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-In a sports arena": {
+                "Lighting Power Density, W/ft2": 0.4,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-Transportation facility": {
+                "Lighting Power Density, W/ft2": 0.5,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Audience Seating Area-All other audience seating area": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Atrium-<= 40 ft in height": {
+                "Lighting Power Density, W/ft2": "0.0375 per foot in total height",
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Atrium-> 40 ft in height": {
+                "Lighting Power Density, W/ft2": "0.50 + 0.025 per foot in total height",
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Banking Activity Area": {
+                "Lighting Power Density, W/ft2": 1.5,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Breakroom (See Lounge/Breakroom)": {
+                "Lighting Power Density, W/ft2": 0,
+                "Occupancy Sensor Reduction": 0
+            },
+            "Classroom/Lecture Hall/Training Room-Penitentiary": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Classroom/Lecture Hall/Training Room-Preschool through 12th grade, laboratory, and shop classrooms": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.3
+            },
+            "Classroom/Lecture Hall/Training Room-All other classroom/lecture hall/training room": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Conference/Meeting/Multipurpose Room": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Confinement Cells": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Copy/Print Room": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Corridor-Facility for the visually impaired (and used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 1.15,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Corridor-Hospital": {
+                "Lighting Power Density, W/ft2": 1,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Corridor-Manufacturing facility": {
+                "Lighting Power Density, W/ft2": 0.5,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Corridor-All other corridor": {
+                "Lighting Power Density, W/ft2": 0.5,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Courtroom": {
+                "Lighting Power Density, W/ft2": 1.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Computer Room": {
+                "Lighting Power Density, W/ft2": 2.14,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-Penitentiary": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-Facility for the visually impaired (and used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 3.32,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-Bar/lounge or leisure dining": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-Cafeteria or fast food dining": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-Family dining": {
+                "Lighting Power Density, W/ft2": 2.1,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dining Area-All other dining area": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Electrical/Mechanical Room": {
+                "Lighting Power Density, W/ft2": 1.5,
+                "Occupancy Sensor Reduction": 0.3
+            },
+            "Emergency Vehicle Garage": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Food Preparation Area": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.3
+            },
+            "Food Preparation Area Guest Room": {
+                "Lighting Power Density, W/ft2": 1.14,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Judges Chambers": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": 0.3
+            },
+            "Dwelling Unit": {
+                "Lighting Power Density, W/ft2": 1.07,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Laboratory-In or as a classroom": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Laboratory-All other laboratory": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Laundry/Washing Area": {
+                "Lighting Power Density, W/ft2": 0.6,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Loading Dock, Interior": {
+                "Lighting Power Density, W/ft2": 0.59,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Lobby-Facility for the visually impaired (and used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 2.26,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lobby-Elevator": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lobby-Hotel": {
+                "Lighting Power Density, W/ft2": 1.1,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lobby-Motion picture theater": {
+                "Lighting Power Density, W/ft2": 1.1,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lobby-Performing arts theater": {
+                "Lighting Power Density, W/ft2": 3.3,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lobby-All other lobby": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Locker Room": {
+                "Lighting Power Density, W/ft2": 0.6,
+                "Occupancy Sensor Reduction": 0.25
+            },
+            "Lounge/Breakroom-Healthcare facility": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Lounge/Breakroom-All other lounge/breakroom": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": "None"
+            },
+            "Office-Enclosed": {
+                "Lighting Power Density, W/ft2": 1.1,
+                "Occupancy Sensor Reduction": 0.3
+            },
+            "Office-Open plan": {
+                "Lighting Power Density, W/ft2": 1.1,
+                "Occupancy Sensor Reduction": 0.15
+            },
+            "Parking Area, Interior": {
+                "Lighting Power Density, W/ft2": 0.2,
+                "Occupancy Sensor Reduction": 0.15
+            },
+            "Pharmacy Area": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Restroom-Facility for the visually impaired (and used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 1.52,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Restroom-All other restroom": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Sales Area": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.15
+            },
+            "Seating Area, General": {
+                "Lighting Power Density, W/ft2": 0.68,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Stairwell": {
+                "Lighting Power Density, W/ft2": 0.6,
+                "Occupancy Sensor Reduction": 0.75
+            },
+            "Storage Room-Hospital": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Storage Room->=50 ft2": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Storage Room-<50 ft2": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Vehicular Maintenance Area": {
+                "Lighting Power Density, W/ft2": 0.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Workshop": {
+                "Lighting Power Density, W/ft2": 1.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Assisted Living Facility-Chapel (used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 2.77,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Assisted Living Facility-Recreation room (used primarily by residents)": {
+                "Lighting Power Density, W/ft2": 3.02,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Automotive (same as \u201cVehicular Maintenance Area\u201d)": {
+                "Lighting Power Density, W/ft2": 0.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Convention Center\u2014Exhibit Space": {
+                "Lighting Power Density, W/ft2": 1.3,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Dormitory-Living Quarters": {
+                "Lighting Power Density, W/ft2": 1.11,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Fire Station-Sleeping Quarters": {
+                "Lighting Power Density, W/ft2": 0.3,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Gymnasium/Fitness Center-Exercise area": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Gymnasium/Fitness Center-Playing area": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.35
+            },
+            "Healthcare Facility-Emergency room": {
+                "Lighting Power Density, W/ft2": 2.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Exam/treatment room": {
+                "Lighting Power Density, W/ft2": 1.5,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Medical supply room": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Healthcare Facility-Nursery": {
+                "Lighting Power Density, W/ft2": 0.6,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Nurse's station": {
+                "Lighting Power Density, W/ft2": 1,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Operating room": {
+                "Lighting Power Density, W/ft2": 2.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Patient room": {
+                "Lighting Power Density, W/ft2": 0.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Physical therapy room": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Healthcare Facility-Recovery room": {
+                "Lighting Power Density, W/ft2": 0.8,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Library-Reading area": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.15
+            },
+            "Library-Stacks": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.15
+            },
+            "Manufacturing Facility-Detailed manufacturing area": {
+                "Lighting Power Density, W/ft2": 2.1,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Manufacturing Facility-Equipment room": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Manufacturing Facility-Extra-high bay area (>50 ft floor-to-ceiling height)": {
+                "Lighting Power Density, W/ft2": 1.32,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Manufacturing Facility-High bay area (25 to 50 ft floor-to-ceiling height)": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Manufacturing Facility-Low bay area (<25 ft floor-to-ceiling height)": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Museum-General exhibition area": {
+                "Lighting Power Density, W/ft2": 1,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Museum-Restoration room": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Post Office-Sorting Area": {
+                "Lighting Power Density, W/ft2": 1.2,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Religious Facility-Fellowship hall": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Religious Facility-Worship/pulpit/choir area": {
+                "Lighting Power Density, W/ft2": 2.4,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Retail Facilities-Dressing/fitting room": {
+                "Lighting Power Density, W/ft2": 0.89,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Retail Facilities-Mall concourse": {
+                "Lighting Power Density, W/ft2": 1.7,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Sports Arena-Playing Area-Class I facility": {
+                "Lighting Power Density, W/ft2": 4.61,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Sports Arena-Playing Area-Class II facility": {
+                "Lighting Power Density, W/ft2": 3.01,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Sports Arena-Playing Area-Class III facility": {
+                "Lighting Power Density, W/ft2": 2.26,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Sports Arena-Playing Area-Class IV facility": {
+                "Lighting Power Density, W/ft2": 1.5,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Transportation Facility-Baggage/carousel area": {
+                "Lighting Power Density, W/ft2": 1,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Transportation Facility-Airport concourse": {
+                "Lighting Power Density, W/ft2": 0.6,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Transportation Facility-Ticket counter": {
+                "Lighting Power Density, W/ft2": 1.5,
+                "Occupancy Sensor Reduction": 0.1
+            },
+            "Warehouse-Storage Area-Medium to bulky, palletized items": {
+                "Lighting Power Density, W/ft2": 0.9,
+                "Occupancy Sensor Reduction": 0.45
+            },
+            "Warehouse-Storage Area-Smaller, hand-carried items": {
+                "Lighting Power Density, W/ft2": 1.4,
+                "Occupancy Sensor Reduction": 0.45
+            }
+        }
+    }
+}
