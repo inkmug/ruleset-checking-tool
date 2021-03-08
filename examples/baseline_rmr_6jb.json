@@ -1,0 +1,52 @@
+{
+    "rule-6jb-a": {
+        "Section": 6,
+        "Rule": "6jb",
+        "Test": "b",
+        "description": "For the proposed building, each space has the same lighting power as the corresponding space in the U-RMR",
+        "rmr_transformations": {
+            "user": {
+                "Space": {
+                    "ID": "Space ID 1",
+                    "lighting_space_type": "\"Hotel or Motel room\"",
+                    "area": "100 ft2",
+                    "interior_lighting_power": "30 W"
+                }
+            },
+            "proposed": {
+                "Space": {
+                    "ID": "Space ID 1",
+                    "lighting_space_type": "\"Hotel or Motel room\"",
+                    "area": "100 ft2",
+                    "interior_lighting_power": "30 W"
+                }
+            }
+        },
+        "expected_rule_outcome": "Fail"
+    },
+    "rule-6jb-b": {
+        "Section": 6,
+        "Rule": "6jb",
+        "Test": "b",
+        "description": "For the proposed building, each space has the same lighting power as the corresponding space in the U-RMR",
+        "rmr_transformations": {
+            "user": {
+                "Space": {
+                    "ID": "Space ID 1",
+                    "lighting_space_type": "\"Hotel or Motel room\"",
+                    "area": "100 ft2",
+                    "interior_lighting_power": "30 W"
+                }
+            },
+            "proposed": {
+                "Space": {
+                    "ID": "Space ID 1",
+                    "lighting_space_type": "\"Hotel or Motel room\"",
+                    "area": "100 ft2",
+                    "interior_lighting_power": "30 W"
+                }
+            }
+        },
+        "expected_rule_outcome": "Fail"
+    }
+}
