@@ -67,5 +67,70 @@ class Section6Rule1(RuleDefinitionListIndexedBase):
                     == calc_vals["space_lighting_power_proposed"]
                 )
 
+class Section6Rule8(RuleDefinitionListIndexedBase):
+    """Rule 8 of ASHRAE 90.1-2019 Appendix G Section 6 (Lighting)"""
 
+    def __init__(self):
+        super(Section6Rule1, self).__init__(
+            rmrs_used=UserBaselineProposedVals(False, True, False),
+            each_rule=Section6Rule1.BuildingRule(),
+            index_rmr="baseline",
+            id="6-8",
+            description="The baseline LPD is equal to expected value in Table G3.7 when lighting has been designed and submitted.",
+            rmr_context="buildings",
+        )
+
+    class BuildingRule(RuleDefinitionListIndexedBase):
+        """Rule Definition section applied to each Building.
+        """
+        def __init__(self):
+            super(Section6Rule8.BuildingRule, self).__init__(
+                rmrs_used=UserBaselineProposedVals(False, True, False),
+                each_rule=Section6Rule1.BuildingRule.SpaceRule(),
+                index_rmr="baseline",
+                list_path="$..spaces[*]",  # All spaces inside the building
+            )
+
+        def is_applicable(self, context, data=None):
+            # Function to check if space by space method is used
+            is_space_by_space_method_used = check_lighting_space_by_space_method(context.baseline)
+            
+            #Return TRUE if space by space method is used.  Otherwise, return FALSE.
+            return is_space_by_space_method_used
+
+        class SpaceRule(RuleDefinitionBase):
+            """Rule Definition section to be applied to each Space in a Building.
+            """
+            def __init__(self):
+                super(Section6Rule8.BuildingRule.SpaceRule, self,).__init__(
+                    # Data elements to be extracted from RMR
+                    required_fields={
+                        "interior_lighting[*]": ["power_per_area"],
+                    },
+                    rmrs_used=UserBaselineProposedVals(True, False, True),
+                )
+
+            def get_calc_vals(self, context, data=None):
+                """Function to return calculated values from Space data groups.
+                """                
+                space_lighting_power_per_area = sum(
+                    find_all("interior_lighting[*].power_per_area", context.baseline)
+                )
+                lighting_space_type = context.user["lighting_space_type"]
+                interior_lighting_power_allowance = table_G3_7(space_type=lighting_space_type)
+
+                return {
+                    "space_lighting_power_per_area": space_lighting_power_per_area,
+                    "interior_lighting_power_allowance": interior_lighting_power_allowance,
+                }
+
+            def rule_check(self, context, calc_vals, data=None):
+                """Function defining the logical assertion of Rule 6-8.
+                    i.e. Baseline LPD for a space is equal to Table G3.7 lighting power allowance.
+                    Return TRUE if assertion is valid.  Returns FALSE is assertion is invalid.
+                """
+                return (
+                    calc_vals["space_lighting_power_per_area"]
+                    == calc_vals["interior_lighting_power_allowance"]
+                )
 # ------------------------
