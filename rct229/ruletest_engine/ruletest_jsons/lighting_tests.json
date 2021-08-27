@@ -29,12 +29,12 @@
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
                                                                 "name": "Guest Room Lighting",
-                                                                "power_per_area": 4.4116
+                                                                "power_per_area": 0.41
                                                             }
                                                         ]
                                                     },
@@ -42,12 +42,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -84,12 +84,12 @@
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
                                                                 "name": "Guest Room Lighting",
-                                                                "power_per_area": 4.4116
+                                                                "power_per_area": 0.41
                                                             }
                                                         ]
                                                     },
@@ -97,12 +97,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -148,7 +148,7 @@
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
@@ -161,12 +161,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -203,7 +203,7 @@
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
@@ -216,12 +216,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -262,18 +262,18 @@
                                             {
                                                 "id": 0,
                                                 "name": "Thermal Zone 1",
-                                                "volume": 311.5,
+                                                "volume": 11000,
                                                 "spaces": [
                                                     {
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
                                                                 "name": "Guest Room Lighting",
-                                                                "power_per_area": 4.4116
+                                                                "power_per_area": 0.41
                                                             }
                                                         ]
                                                     },
@@ -281,12 +281,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -318,18 +318,18 @@
                                             {
                                                 "id": 0,
                                                 "name": "Thermal Zone 1",
-                                                "volume": 311.5,
+                                                "volume": 11000,
                                                 "spaces": [
                                                     {
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
                                                                 "name": "Guest Room Lighting",
-                                                                "power_per_area": 4.4116
+                                                                "power_per_area": 0.41
                                                             }
                                                         ]
                                                     },
@@ -337,12 +337,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -383,13 +383,13 @@
                                             {
                                                 "id": 0,
                                                 "name": "Thermal Zone 1",
-                                                "volume": 311.5,
+                                                "volume": 11000,
                                                 "spaces": [
                                                     {
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
@@ -402,12 +402,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
@@ -439,13 +439,13 @@
                                             {
                                                 "id": 0,
                                                 "name": "Thermal Zone 1",
-                                                "volume": 311.5,
+                                                "volume": 11000,
                                                 "spaces": [
                                                     {
                                                         "id": 1,
                                                         "name": "Space 1",
                                                         "lighting_space_type": "GUEST_ROOM",
-                                                        "floor_area": 9.29,
+                                                        "floor_area": 100,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 1,
@@ -458,12 +458,12 @@
                                                         "id": 2,
                                                         "name": "Space 2",
                                                         "lighting_space_type": "LOBBY_HOTEL",
-                                                        "floor_area": 92.9,
+                                                        "floor_area": 1000,
                                                         "interior_lighting": [
                                                             {
                                                                 "id": 2,
                                                                 "name": "Hotel Lobby Lighting",
-                                                                "power_per_area": 11.836
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     }
