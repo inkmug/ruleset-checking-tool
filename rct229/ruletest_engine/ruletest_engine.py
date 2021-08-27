@@ -544,3 +544,18 @@ def run_lighting_tests():
     lighting_test_json = "lighting_tests.json"
 
     return run_section_tests(lighting_test_json)
+
+
+def run_receptacle_tests():
+    """Runs all tests found in the lighting tests JSON.
+
+    Returns
+    -------
+    None
+
+    Results of lighting test are spit out to console
+    """
+
+    receptacle_json = "receptacle_tests.json"
+
+    return run_section_tests(receptacle_json)

@@ -1,0 +1,698 @@
+{
+    "rule-12-1a": {
+        "Section": 12,
+        "Rule": 1,
+        "Test": "a",
+        "description": "Space count in Baseline RMR = User RMR",
+        "expected_outcome": "pass",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "baseline": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-1b": {
+        "Section": 12,
+        "Rule": 1,
+        "Test": "b",
+        "description": "Space count in Baseline RMR > User RMR",
+        "expected_outcome": "fail",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "baseline": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-1c": {
+        "Section": 12,
+        "Rule": 1,
+        "Test": "c",
+        "description": "Space count in Baseline RMR < User RMR",
+        "expected_outcome": "fail",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "baseline": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-2a": {
+        "Section": 12,
+        "Rule": 2,
+        "Test": "a",
+        "description": "Space count in Proposed RMR = User RMR",
+        "expected_outcome": "pass",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposed": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-2b": {
+        "Section": 12,
+        "Rule": 2,
+        "Test": "b",
+        "description": "Space count in Proposed RMR > User RMR",
+        "expected_outcome": "fail",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposed": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-2c": {
+        "Section": 12,
+        "Rule": 2,
+        "Test": "c",
+        "description": "Space count in Proposed RMR < User RMR",
+        "expected_outcome": "fail",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposed": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-3a": {
+        "Section": 12,
+        "Rule": 3,
+        "Test": "a",
+        "description": "User RMR space name is in the Proposed RMR",
+        "expected_outcome": "pass",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposed": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rule-12-3b": {
+        "Section": 12,
+        "Rule": 3,
+        "Test": "b",
+        "description": "User RMR space name is not in the Proposed RMR",
+        "expected_outcome": "fail",
+        "rmr_transformations": {
+            "user": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 2,
+                                                        "name": "space_name_2"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "proposed": {
+                "buildings": [
+                    {
+                        "id": 0,
+                        "name": "building_name",
+                        "is_all_new": true,
+                        "building_segments": [
+                            {
+                                "id": 0,
+                                "name": "building_segment",
+                                "thermal_blocks": [
+                                    {
+                                        "id": 0,
+                                        "name": "thermal_block_name",
+                                        "zones": [
+                                            {
+                                                "id": 0,
+                                                "name": "zone_name",
+                                                "spaces": [
+                                                    {
+                                                        "id": 1,
+                                                        "name": "space_name_1"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
