@@ -1,0 +1,270 @@
+{
+    "invalid_rmrs": {},
+    "outcomes": [
+        {
+            "id": "12-1",
+            "description": "Number of spaces modeled in User RMR and Baseline RMR are the same",
+            "rmr_context": "/buildings",
+            "result": [
+                {
+                    "calc_vals": {
+                        "num_user_spaces": 4,
+                        "num_baseline_spaces": 4
+                    },
+                    "result": "PASSED",
+                    "name": "building_name"
+                }
+            ]
+        },
+        {
+            "id": "12-2",
+            "description": "Number of spaces modeled in User RMR and Proposed RMR are the same",
+            "rmr_context": "/buildings",
+            "result": [
+                {
+                    "calc_vals": {
+                        "num_user_spaces": 4,
+                        "num_proposed_spaces": 4
+                    },
+                    "result": "PASSED",
+                    "name": "building_name"
+                }
+            ]
+        },
+        {
+            "id": "12-3",
+            "description": "User RMR Space ID in Proposed RMR",
+            "rmr_context": "/buildings",
+            "result": [
+                {
+                    "result": [
+                        {
+                            "calc_vals": {
+                                "user_space_id": 1
+                            },
+                            "result": "PASSED",
+                            "id": 1,
+                            "name": "Space 1"
+                        },
+                        {
+                            "calc_vals": {
+                                "user_space_id": 2
+                            },
+                            "result": "PASSED",
+                            "id": 2,
+                            "name": "Space 2"
+                        },
+                        {
+                            "calc_vals": {
+                                "user_space_id": 1
+                            },
+                            "result": "PASSED",
+                            "id": 1,
+                            "name": "Space 1"
+                        },
+                        {
+                            "calc_vals": {
+                                "user_space_id": 2
+                            },
+                            "result": "PASSED",
+                            "id": 2,
+                            "name": "Space 2"
+                        }
+                    ],
+                    "name": "building_name"
+                }
+            ]
+        },
+        {
+            "id": "15-1",
+            "description": "Number of transformers modeled in User RMR and Baseline RMR are the same",
+            "rmr_context": "/transformers",
+            "calc_vals": {
+                "num_user_transformers": 2,
+                "num_baseline_transformers": 2
+            },
+            "result": "PASSED"
+        },
+        {
+            "id": "15-2",
+            "description": "Number of transformers modeled in User RMR and Proposed RMR are the same",
+            "rmr_context": "/transformers",
+            "calc_vals": {
+                "num_user_transformers": 2,
+                "num_proposed_transformers": 2
+            },
+            "result": "PASSED"
+        },
+        {
+            "id": "15-3",
+            "description": "User RMR transformer Name in Proposed RMR",
+            "rmr_context": "/transformers",
+            "result": [
+                {
+                    "calc_vals": {
+                        "user_transformer_name": "Transformer 1",
+                        "proposed_transformer_names": [
+                            "Transformer 1",
+                            "Transformer 2"
+                        ]
+                    },
+                    "result": "PASSED",
+                    "id": 1,
+                    "name": "Transformer 1"
+                },
+                {
+                    "calc_vals": {
+                        "user_transformer_name": "Transformer 2",
+                        "proposed_transformer_names": [
+                            "Transformer 1",
+                            "Transformer 2"
+                        ]
+                    },
+                    "result": "PASSED",
+                    "id": 2,
+                    "name": "Transformer 2"
+                }
+            ]
+        },
+        {
+            "id": "15-4",
+            "description": "User RMR transformer Name in Baseline RMR",
+            "rmr_context": "/transformers",
+            "result": [
+                {
+                    "calc_vals": {
+                        "user_transformer_name": "Transformer 1",
+                        "baseline_transformer_names": [
+                            "Transformer 1",
+                            "Transformer 2"
+                        ]
+                    },
+                    "result": "PASSED",
+                    "id": 1,
+                    "name": "Transformer 1"
+                },
+                {
+                    "calc_vals": {
+                        "user_transformer_name": "Transformer 2",
+                        "baseline_transformer_names": [
+                            "Transformer 1",
+                            "Transformer 2"
+                        ]
+                    },
+                    "result": "PASSED",
+                    "id": 2,
+                    "name": "Transformer 2"
+                }
+            ]
+        },
+        {
+            "id": "15-5",
+            "description": "Transformer efficiency reported in Baseline RMR equals Table 8.4.4",
+            "rmr_context": "/transformers",
+            "result": [
+                {
+                    "calc_vals": {
+                        "baseline_transformer_efficiency": 0.986,
+                        "required_baseline_transformer_efficiency": 0.986
+                    },
+                    "result": "PASSED",
+                    "id": 1,
+                    "name": "Transformer 1"
+                },
+                {
+                    "result": "NA",
+                    "id": 2,
+                    "name": "Transformer 2"
+                }
+            ]
+        },
+        {
+            "id": "15-6",
+            "description": "Transformer efficiency reported in User RMR equals Table 8.4.4",
+            "rmr_context": "/transformers",
+            "result": [
+                {
+                    "calc_vals": {
+                        "user_transformer_efficiency": 0.986,
+                        "required_user_transformer_min_efficiency": 0.986
+                    },
+                    "result": "PASSED",
+                    "id": 1,
+                    "name": "Transformer 1"
+                },
+                {
+                    "calc_vals": {
+                        "user_transformer_efficiency": 0.988,
+                        "required_user_transformer_min_efficiency": 0.9883
+                    },
+                    "result": "FAILED",
+                    "id": 2,
+                    "name": "Transformer 2"
+                }
+            ]
+        },
+        {
+            "id": "6-1",
+            "description": "For the proposed building, each space has the same lighting power as the corresponding space in the U-RMR",
+            "rmr_context": "/buildings",
+            "result": [
+                {
+                    "result": [
+                        {
+                            "calc_vals": {
+                                "space_lighting_power_user": 41.0,
+                                "space_lighting_power_proposed": 41.0
+                            },
+                            "result": "PASSED",
+                            "id": 1,
+                            "name": "Space 1"
+                        },
+                        {
+                            "calc_vals": {
+                                "space_lighting_power_user": 1100.0,
+                                "space_lighting_power_proposed": 1100.0
+                            },
+                            "result": "PASSED",
+                            "id": 2,
+                            "name": "Space 2"
+                        },
+                        {
+                            "calc_vals": {
+                                "space_lighting_power_user": 41.0,
+                                "space_lighting_power_proposed": 41.0
+                            },
+                            "result": "PASSED",
+                            "id": 1,
+                            "name": "Space 1"
+                        },
+                        {
+                            "calc_vals": {
+                                "space_lighting_power_user": 1100.0,
+                                "space_lighting_power_proposed": 1100.0
+                            },
+                            "result": "PASSED",
+                            "id": 2,
+                            "name": "Space 2"
+                        }
+                    ],
+                    "name": "building_name"
+                }
+            ]
+        },
+        {
+            "id": "6-2",
+            "description": "The total building interior lighting power shall not exceed the interior lighting power allowance determined using either Table G3.7 or G3.8",
+            "rmr_context": "/buildings",
+            "result": [
+                {
+                    "calc_vals": {
+                        "building_allowable_lighting_power": 2413.0,
+                        "building_design_lighting_power": 2282.0
+                    },
+                    "result": "PASSED",
+                    "name": "building_name"
+                }
+            ]
+        }
+    ]
+}

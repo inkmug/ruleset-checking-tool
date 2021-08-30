@@ -1,11 +1,14 @@
 import click
 
 from rct229.reports.project_report import (
-    print_json_report,
-    print_rule_report,
+    #print_json_report,
+    write_json_report,
+    write_rule_evaluation_report,
+    #print_rule_report,
     print_summary_report,
 )
 from rct229.rule_engine.engine import evaluate_all_rules
+from rct229.ruletest_engine.ruletest_engine import run_section_tests
 from rct229.schema.validate import validate_rmr
 from rct229.utils.file import deserialize_rmr_file
 
@@ -25,16 +28,26 @@ def cli():
 
 
 # Evaluate RMR Triplet
-short_help_text = "Test RMR triplet."
+short_help_text = "Run Project Testing Workflow on RMR triplet."
 help_text = short_help_text
-
-
-@cli.command("evaluate", short_help=short_help_text, help=help_text, hidden=True)
+@cli.command("run_project_tests", short_help=short_help_text, help=help_text, hidden=True)
 @click.argument("user_rmr", type=click.File("rb"))
 @click.argument("baseline_rmr", type=click.File("rb"))
 @click.argument("proposed_rmr", type=click.File("rb"))
-def evalute_rmr_triplet(user_rmr, baseline_rmr, proposed_rmr):
-    print("Test implementation of rule engine for ASHRAE Std 229 RCT.")
+def run_project_tests(user_rmr, baseline_rmr, proposed_rmr):
+    print("")
+    print("*****************************************************************")
+    print("ASHRAE STD 229P RULESET CHECKING TOOL")
+    print("Project Testing Workflow")
+    print("Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)")
+    print("*****************************************************************")
+    print("")
+    print("----------------------------------")
+    print("READING RMR FILES...")
+    print(f"  User: {user_rmr.name}")
+    print(f"  Baseline: {baseline_rmr.name}")
+    print(f"  Proposed: {proposed_rmr.name}")
+    print("----------------------------------")
     print("")
 
     user_rmr_obj = None
@@ -61,18 +74,32 @@ def evalute_rmr_triplet(user_rmr, baseline_rmr, proposed_rmr):
         print("")
         return
     else:
-        print("Processing rules...")
-        print("")
+        print("----------------------------------")
+        print("RUNNING RULE EVALUATIONS...")
+        print("  Section 6...")
+        print("  Section 12...")
+        print("  Section 15...")
 
         report = evaluate_all_rules(user_rmr_obj, baseline_rmr_obj, proposed_rmr_obj)
+        
+        print("")
+        print("RULE EVALUATIONS COMPLETE.")
+        print("----------------------------------")
+        print("")
+        
+
         # Example - Print a final compliance report
         # [We'll actually most likely save a data file here and report occurs from separate CLI command]
-        print_json_report(report)
-        print_rule_report(report)
+        write_json_report(report)
+        #print_json_report(report)
+        write_rule_evaluation_report(report)
+        #print_rule_report(report)
         print_summary_report(report)
 
-        print("Rules completed.")
         print("")
+        print("PROJECT TESTING WORKFLOW COMPLETE.")
+
+
 
     # # Validate the rmrs against the schema and other high-level checks
     # user_validation = validate_rmr(user_rmr_obj)
@@ -95,6 +122,27 @@ def evalute_rmr_triplet(user_rmr, baseline_rmr, proposed_rmr):
     #     evaluate_all_rules(user_rmr_obj, baseline_rmr_obj, proposed_rmr_obj)
     #     print("Rules completed.")
     #     print("")
+
+
+# Run Rule Tests
+short_help_text = "Validate RCT by running Rule Tests."
+help_text = short_help_text
+@cli.command("run_software_tests", short_help=short_help_text, help=help_text, hidden=True)
+def run_software_tests():
+    print("ASHRAE Std 229P Ruleset Checking Tool")
+    print("Software Testing Workflow")
+    print("Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)")
+    print("")
+
+    try:
+        run_section_tests("transformer_tests.json")
+        run_section_tests("lighting_tests.json")
+        run_section_tests("receptacle_tests.json")
+    except:
+        print("Rule Tests failed.")
+
+    print("All Rule Tests completed.")
+    print("")
 
 
 if __name__ == "__main__":
