@@ -4,7 +4,7 @@
         "Rule": 1,
         "Test": "a",
         "description": "Space count in Baseline RMR = User RMR",
-        "expected_outcome": "pass",
+        "expected_rule_outcome": "pass",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -95,7 +95,7 @@
         "Rule": 1,
         "Test": "b",
         "description": "Space count in Baseline RMR > User RMR",
-        "expected_outcome": "fail",
+        "expected_rule_outcome": "fail",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -182,7 +182,7 @@
         "Rule": 1,
         "Test": "c",
         "description": "Space count in Baseline RMR < User RMR",
-        "expected_outcome": "fail",
+        "expected_rule_outcome": "fail",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -269,7 +269,7 @@
         "Rule": 2,
         "Test": "a",
         "description": "Space count in Proposed RMR = User RMR",
-        "expected_outcome": "pass",
+        "expected_rule_outcome": "pass",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -360,7 +360,7 @@
         "Rule": 2,
         "Test": "b",
         "description": "Space count in Proposed RMR > User RMR",
-        "expected_outcome": "fail",
+        "expected_rule_outcome": "fail",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -425,6 +425,10 @@
                                                     {
                                                         "id": 2,
                                                         "name": "space_name_2"
+                                                    },
+                                                    {
+                                                        "id": 3,
+                                                        "name": "space_name_3"
                                                     }
                                                 ]
                                             }
@@ -443,7 +447,7 @@
         "Rule": 2,
         "Test": "c",
         "description": "Space count in Proposed RMR < User RMR",
-        "expected_outcome": "fail",
+        "expected_rule_outcome": "fail",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -512,10 +516,6 @@
                                                     {
                                                         "id": 2,
                                                         "name": "space_name_2"
-                                                    },
-                                                    {
-                                                        "id": 3,
-                                                        "name": "space_name_3"
                                                     }
                                                 ]
                                             }
@@ -534,7 +534,7 @@
         "Rule": 3,
         "Test": "a",
         "description": "User RMR space name is in the Proposed RMR",
-        "expected_outcome": "pass",
+        "expected_rule_outcome": "pass",
         "rmr_transformations": {
             "user": {
                 "buildings": [
@@ -617,7 +617,7 @@
         "Rule": 3,
         "Test": "b",
         "description": "User RMR space name is not in the Proposed RMR",
-        "expected_outcome": "fail",
+        "expected_rule_outcome": "fail",
         "rmr_transformations": {
             "user": {
                 "buildings": [
