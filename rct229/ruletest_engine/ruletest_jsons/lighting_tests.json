@@ -394,7 +394,7 @@
                                                             {
                                                                 "id": 1,
                                                                 "name": "Guest Room Lighting",
-                                                                "power_per_area": 0.51
+                                                                "power_per_area": 1.1
                                                             }
                                                         ]
                                                     },
