@@ -16,6 +16,11 @@ def test_run_lighting_json_schema():
     assert validate_test_json_schema(lighting_json_path)
 
 
+def test_run_receptacle_json_schema():
+    receptacle_json_path = os.path.join(test_json_dir, "receptacle_tests.json")
+    assert validate_test_json_schema(receptacle_json_path)
+
+
 # def test_run_envelope_json_schema():
 #
 #     assert validate_test_json_schema(envelope_json_path)
