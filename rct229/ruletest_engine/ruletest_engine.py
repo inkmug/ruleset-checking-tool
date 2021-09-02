@@ -252,16 +252,23 @@ def run_section_tests(test_json_name):
     # hash for capturing test results. Keys include: "results, log"
     test_result_dict = {}
     test_result_dict["results"] = []
+    test_result_dict["errors"] = []
 
-    # Flag checking if all tests succeed. Ensures a message gets printed if so.
-    all_tests_pass = True
+    # Initialize statistics
+    n_errors = 0
+    n_missing_rules = 0
 
-    # Print banner messages
-    banner_text = f"TESTS RESULTS FOR: {test_json_name}".center(50)
     banner = [
-        "-----------------------------------------------------------------------------------------",
-        f"--------------------{banner_text}-------------------",
-        "-----------------------------------------------------------------------------------------",
+        "",
+        "*****************************************************************",
+        "ASHRAE STD 229P RULESET CHECKING TOOL",
+        "Project Testing Workflow",
+        "Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)",
+        "*****************************************************************",
+        "",
+        "----------------------------------",
+        f"TESTING {test_json_name}...",
+        "----------------------------------",
         "",
     ]
 
@@ -293,7 +300,7 @@ def run_section_tests(test_json_name):
         test_result_dict[
             f"{test_id}"
         ] = []  # Initialize log of this tests multiple results
-        print_errors = False
+        had_errors = False
 
         # Pull in rule, if written. If not found, fail the test and log which Section and Rule could not be found.
         try:
@@ -305,7 +312,7 @@ def run_section_tests(test_json_name):
 
             # Append failed message to rule
             test_result_dict["results"].append(False)
-            all_tests_pass = False
+            n_missing_rules += 1
             continue
 
         # Evaluate rule and check for invalid RMRs
@@ -325,7 +332,7 @@ def run_section_tests(test_json_name):
 
             # Append failed message to rule
             test_result_dict["results"].append(False)
-            all_tests_pass = False
+            n_errors += 1
 
         # If RMRs are valid, check their outcomes
         else:
@@ -349,28 +356,53 @@ def run_section_tests(test_json_name):
                 # For an expected pass, ALL tested elements in the RMR triplet must pass
                 if not all(test_result_dict[f"{test_id}"]):
 
-                    print_errors = True
+                    had_errors = True
 
             elif test_dict["expected_rule_outcome"] == "fail":
 
                 # If all elements don't meet the expected outcome, flag this as an error
                 if not any(test_result_dict[f"{test_id}"]):
-                    print_errors = True
+                    had_errors = True
 
             # If errors were found, communicate the error logs
-            if print_errors:
+            if had_errors:
 
-                all_tests_pass = False
+                n_errors += 1
 
-                # Print log of all errors
+                # Catalogue errors
                 for test_result_string in test_result_dict["log"]:
-                    print(test_result_string)
+
+                    # TODO: instead of reinitializing "log" every test run, append errors to test_result_dict as you go
+                    test_result_dict["errors"].append(test_result_string)
+
+                    # print(test_result_string)
+
+    # Process results
+    n_tests, n_evaluations = get_number_of_tests_and_evaluations(test_result_dict)
 
     # Print results to console
-    if all_tests_pass:
-        print("All tests passed!")
-
+    print("")
+    print("RULETEST EVALUATIONS COMPLETE.")
+    print("----------------------------------")
+    print("")
+    print("Totals:")
+    print(f"    Tests: {n_tests}")
+    print(f"    Evaluations: {n_evaluations}")
+    print("")
+    print("Test Evaluations:")
+    print(f"    Passed:{n_tests - n_errors - n_missing_rules}")
+    print(f"    Failed:{n_errors}")
+    print(f"    Missing Rules:{n_missing_rules}")
     print("")  # Buffer line
+
+    if n_errors != 0:
+
+        print("")
+        print("ERRORS:")
+        print("----------------------------------")
+        # Print errors
+        for error_string in test_result_dict["errors"]:
+            print(error_string)
 
     # Return whether or not all tests in this test JSON received their expected outcome as a boolean
     all_tests_successful = all(test_result_dict["results"])
@@ -517,6 +549,44 @@ def evaluate_outcome_object(outcome_dict, test_result_dict, test_dict, test_id):
             )
 
         test_result_dict[f"{test_id}"].append(received_expected_outcome)
+
+
+def get_number_of_tests_and_evaluations(test_result_dic):
+
+    """
+    Determines the number of tests and evaluations performed after running a test JSON.
+
+    Parameters
+    ----------
+
+    test_result_dict: dict
+
+        Dictionary used to log errors and aggregate the test results for a test JSON. This should be fully populated
+        once the code reaches this point
+
+    Returns
+    -------
+    n_tests: int
+        The number of tests evaluated
+    n_evaluations: int
+        The total number of evaluations ran. Many tests run more than one evaluation at a time. This tracks the total.
+
+    """
+
+    n_tests = 0
+    n_evaluations = 0
+
+    for key in test_result_dic:
+
+        # Skip any test element that's not a rule (e.g., log)
+        if "rule" not in key:
+            continue
+
+        # Add number of evaluations for this rule to total
+        n_tests += 1
+        n_evaluations += len(test_result_dic[key])
+
+    return n_tests, n_evaluations
 
 
 def run_transformer_tests():
