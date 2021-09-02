@@ -1,34 +1,46 @@
 import json
 import os
 
-from rct229.utils.file import save_text_file
-from rct229.utils.json_utils import save_json 
 from rct229.reports.utils import aggregate_outcomes
+from rct229.utils.file import save_text_file
+from rct229.utils.json_utils import save_json
+
 
 def write_json_report(report):
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "examples")
+    path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..", "..", "examples"
+    )
     filename = "project_testing_report.json"
     save_json(report, path, filename)
 
+
 def write_rule_evaluation_report(report):
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "examples")
+    path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..", "..", "examples"
+    )
     filename = "rule_evaluation.log"
 
     outcomes = report["outcomes"]
 
     report_str = ""
     for outcome in outcomes:
-        report_str += ("--------------------------------------------------------------------\n")
-        report_str += (f"Rule: {str(outcome['id'])}\n")
-        report_str += (f"Description: {str(outcome['description'])}\n")
-        report_str += (f"RMR context: {str(outcome['rmr_context'])}\n")
-        report_str += (f"Rule result: {str(outcome['result'])}\n")
-        report_str += ("--------------------------------------------------------------------\n")
+        report_str += (
+            "--------------------------------------------------------------------\n"
+        )
+        report_str += f"Rule: {str(outcome['id'])}\n"
+        report_str += f"Description: {str(outcome['description'])}\n"
+        report_str += f"RMR context: {str(outcome['rmr_context'])}\n"
+        report_str += f"Rule result: {str(outcome['result'])}\n"
+        report_str += (
+            "--------------------------------------------------------------------\n"
+        )
 
     save_text_file(report_str, path, filename)
 
+
 def print_json_report(report):
     print(json.dumps(report, indent=2))
+
 
 def print_rule_report(report):
     outcomes = report["outcomes"]
@@ -67,6 +79,8 @@ def print_summary_report(report):
         print(f"  Failed: {summary_dict['number_failed']}")
         print(f"  Missing Context: {summary_dict['number_missing_context']}")
         print(f"  Not Applicable: {summary_dict['number_not_applicable']}")
-        print(f"  Manual Check Required: {summary_dict['number_manual_check_required']}")
+        print(
+            f"  Manual Check Required: {summary_dict['number_manual_check_required']}"
+        )
         print("")
         print("----------------------------------")
