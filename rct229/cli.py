@@ -5,8 +5,10 @@ from rct229.reports.project_report import (
     write_json_report,
     write_rule_evaluation_report,
     #print_rule_report,
-    print_summary_report,
+    print_summary_report
 )
+from rct229.reports.software_testing_report import print_summary_report as print_software_summary_report
+
 from rct229.rule_engine.engine import evaluate_all_rules
 from rct229.ruletest_engine.ruletest_engine import run_section_tests
 from rct229.schema.validate import validate_rmr
@@ -90,9 +92,9 @@ def run_project_tests(user_rmr, baseline_rmr, proposed_rmr):
 
         # Example - Print a final compliance report
         # [We'll actually most likely save a data file here and report occurs from separate CLI command]
-        write_json_report(report)
+        #write_json_report(report)
         #print_json_report(report)
-        write_rule_evaluation_report(report)
+        #write_rule_evaluation_report(report)
         #print_rule_report(report)
         print_summary_report(report)
 
@@ -129,19 +131,32 @@ short_help_text = "Validate RCT by running Rule Tests."
 help_text = short_help_text
 @cli.command("run_software_tests", short_help=short_help_text, help=help_text, hidden=True)
 def run_software_tests():
+    print("")
+    print("*****************************************************************")
     print("ASHRAE Std 229P Ruleset Checking Tool")
     print("Software Testing Workflow")
     print("Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)")
+    print("*****************************************************************")
     print("")
 
+    test_outcomes = {}
     try:
-        run_section_tests("transformer_tests.json")
-        run_section_tests("lighting_tests.json")
-        run_section_tests("receptacle_tests.json")
+        print("----------------------------------")
+        print("RUNNING RULE TESTS...")
+        test_outcomes['lighting'] = run_section_tests("lighting_tests.json")
+        test_outcomes['receptacles'] = run_section_tests("receptacle_tests.json")
+        test_outcomes['transformers'] = run_section_tests("transformer_tests.json")
+        print("")
+        print("RULE TESTS COMPLETE.")
+        print("----------------------------------")
+        print("")
+        print_software_summary_report(test_outcomes)
+
     except:
         print("Rule Tests failed.")
 
-    print("All Rule Tests completed.")
+    print("")
+    print("SOFTWARE TESTING WORKFLOW COMPLETE.")
     print("")
 
 

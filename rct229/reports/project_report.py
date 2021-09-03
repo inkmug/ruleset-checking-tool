@@ -84,3 +84,4 @@ def print_summary_report(report):
         )
         print("")
         print("----------------------------------")
+        print("")

@@ -1,6 +1,68 @@
 {
-    "invalid_rmrs": {},
-    "outcomes": [
+    "title": "ASHRAE STD 229P RULESET CHECKING TOOL",
+    "purpose": "Project Testing Report",
+    "ruleset": "ASHRAE 90.1-2019 Performance Rating Method (Appendix G)",
+    "date_run": "09-03-2021",
+    "rmr_files": [
+        "user_rmr.json",
+        "baseline_rmr.json",
+        "proposed_rmr.json"
+    ],
+    "summary": {
+        "all": {
+            "number_of_rules": 11,
+            "number_of_rule_evaluations": 21,
+            "test_outcomes": {
+                "passed": 19,
+                "failed": 1,
+                "missing_context": 0,
+                "not_applicable": 1,
+                "manual_check_required": 0
+            },
+            "failing_rules": [
+                "15-6"
+            ]
+        },
+        "lighting": {
+            "number_of_rules": 2,
+            "number_of_rule_evaluations": 5,
+            "rule_outcomes": {
+                "passed": 5,
+                "failed": 0,
+                "missing_context": 0,
+                "not_applicable": 0,
+                "manual_check_required": 0
+            },
+            "failing_rules": []
+        },
+        "receptacles": {
+            "number_of_rules": 3,
+            "number_of_rule_evaluations": 6,
+            "rule_outcomes": {
+                "passed": 6,
+                "failed": 0,
+                "missing_context": 0,
+                "not_applicable": 0,
+                "manual_check_required": 0
+            },
+            "failing_rules": []
+        },
+        "transformers": {
+            "number_of_rules": 6,
+            "number_of_rule_evaluations": 10,
+            "rule_outcomes": {
+                "passed": 8,
+                "failed": 1,
+                "missing_context": 0,
+                "not_applicable": 1,
+                "manual_check_required": 0
+            },
+            "failing_rules": [
+                "15-6"
+            ]
+        }
+    },
+    "detailed": [
         {
             "id": "12-1",
             "description": "Number of spaces modeled in User RMR and Baseline RMR are the same",

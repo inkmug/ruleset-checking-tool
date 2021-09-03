@@ -1,0 +1,163 @@
+{
+    "title": "ASHRAE STD 229P RULESET CHECKING TOOL",
+    "purpose": "Software Testing Report",
+    "ruleset": "ASHRAE 90.1-2019 Performance Rating Method (Appendix G)",
+    "date_run": "09-03-2021",
+    "test_files": [
+        "envelope_tests.json",
+        "lighting_tests.json",
+        "receptacle_tests.json",
+        "transformer_test.json"
+    ],
+    "summary": {
+        "all": {
+            "number_of_tests": 30,
+            "number_of_rules_tested": 10,
+            "test_outcomes": {
+                "passed": 95,
+                "failed": 2
+            },
+            "failing_tests": [
+                "6-1-a",
+                "6-1-b"
+            ]
+        },
+        "envelope": {
+            "number_of_tests": 4,
+            "number_of_rules_tested": 1,
+            "test_outcomes": {
+                "passed": 4,
+                "failed": 0
+            },
+            "failing_tests": []
+        },
+        "lighting": {
+            "number_of_tests": 4,
+            "number_of_rules_tested": 2,
+            "test_outcomes": {
+                "passed": 2,
+                "failed": 2
+            },
+            "failing_tests": [
+                "6-1-a",
+                "6-1-b"
+            ]
+        },
+        "receptacles": {
+            "number_of_tests": 8,
+            "number_of_rules_tested": 8,
+            "test_outcomes": {
+                "passed": 8,
+                "failed": 0
+            },
+            "failing_tests": []
+        },
+        "transformers": {
+            "number_of_tests": 14,
+            "number_of_rules_tested": 5,
+            "test_outcomes": {
+                "passed": 14,
+                "failed": 0
+            },
+            "failing_tests": []
+        }
+    },
+    "detailed": [
+        {
+            "test_id": "6-1-a",
+            "rule_id": "6-1",
+            "description": "Proposed building ILP equals to user building ILP",
+            "expected_rule_outcome": "PASSED",
+            "rule_results": {
+                "expected_rule_outcome": "PASSED",
+                "rmr_context": "/buildings",
+                "rule_evaluations": [
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 41.0,
+                            "space_lighting_power_proposed": 41.0
+                        },
+                        "result": "PASSED",
+                        "id": 1,
+                        "name": "Space 1"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 1100.0,
+                            "space_lighting_power_proposed": 1100.0
+                        },
+                        "result": "PASSED",
+                        "id": 2,
+                        "name": "Space 2"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 41.0,
+                            "space_lighting_power_proposed": 41.0
+                        },
+                        "result": "PASSED",
+                        "id": 1,
+                        "name": "Space 1"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 1100.0,
+                            "space_lighting_power_proposed": 1100.0
+                        },
+                        "result": "PASSED",
+                        "id": 2,
+                        "name": "Space 2"
+                    }
+                ]
+            }
+        },
+        {
+            "test_id": "6-1-b",
+            "rule_id": "6-1",
+            "description": "Proposed building ILP equals to user building ILP",
+            "expected_rule_outcome": "PASSED",
+            "rule_results": {
+                "expected_rule_outcome": "PASSED",
+                "rmr_context": "/buildings",
+                "rule_evaluations": [
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 41.0,
+                            "space_lighting_power_proposed": 41.0
+                        },
+                        "result": "PASSED",
+                        "id": 1,
+                        "name": "Space 1"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 1100.0,
+                            "space_lighting_power_proposed": 1100.0
+                        },
+                        "result": "PASSED",
+                        "id": 2,
+                        "name": "Space 2"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 41.0,
+                            "space_lighting_power_proposed": 41.0
+                        },
+                        "result": "PASSED",
+                        "id": 1,
+                        "name": "Space 1"
+                    },
+                    {
+                        "calc_vals": {
+                            "space_lighting_power_user": 1100.0,
+                            "space_lighting_power_proposed": 1100.0
+                        },
+                        "result": "PASSED",
+                        "id": 2,
+                        "name": "Space 2"
+                    }
+                ]
+            }
+        }
+    ]
+}

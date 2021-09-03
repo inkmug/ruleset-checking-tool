@@ -259,17 +259,18 @@ def run_section_tests(test_json_name):
     n_missing_rules = 0
 
     banner = [
-        "",
-        "*****************************************************************",
-        "ASHRAE STD 229P RULESET CHECKING TOOL",
-        "Project Testing Workflow",
-        "Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)",
-        "*****************************************************************",
-        "",
-        "----------------------------------",
-        f"TESTING {test_json_name}...",
-        "----------------------------------",
-        "",
+        #"",
+        #"*****************************************************************",
+        #"ASHRAE STD 229P RULESET CHECKING TOOL",
+        #"Project Testing Workflow",
+        #"Ruleset: ASHRAE 90.1-2019 Performance Rating Method (Appendix G)",
+        #"*****************************************************************",
+        #"",
+        #"----------------------------------",
+        #f"TESTING {test_json_name}...",
+        #"----------------------------------",
+        #"",
+        f"  {test_json_name}...",
     ]
 
     for line in banner:
@@ -379,21 +380,30 @@ def run_section_tests(test_json_name):
 
     # Process results
     n_tests, n_evaluations = get_number_of_tests_and_evaluations(test_result_dict)
+    n_passing = n_tests - n_errors - n_missing_rules
 
     # Print results to console
+    """
+    #print("")
+    print("RULE TEST EVALUATIONS COMPLETE.")
+    #print("----------------------------------")
     print("")
-    print("RULETEST EVALUATIONS COMPLETE.")
+    print("----------------------------------")
+    print("TEST SUMMARY")
     print("----------------------------------")
     print("")
-    print("Totals:")
-    print(f"    Tests: {n_tests}")
-    print(f"    Evaluations: {n_evaluations}")
-    print("")
-    print("Test Evaluations:")
+    print(f"Number of Tests: {n_tests}")
+    #print("Totals")
+    #print(f"    Tests: {n_tests}")
+    #print(f"    Evaluations: {n_evaluations}")
+    #print("")
+    print("Test Outcomes")
     print(f"    Passed:{n_tests - n_errors - n_missing_rules}")
     print(f"    Failed:{n_errors}")
     print(f"    Missing Rules:{n_missing_rules}")
     print("")  # Buffer line
+    print("----------------------------------")
+    """
 
     if n_errors != 0:
 
@@ -407,7 +417,14 @@ def run_section_tests(test_json_name):
     # Return whether or not all tests in this test JSON received their expected outcome as a boolean
     all_tests_successful = all(test_result_dict["results"])
 
-    return all_tests_successful
+    #return all_tests_successful
+    return {
+            "all_tests_succesful": all_tests_successful,
+            "number_tests": n_tests,
+            "number_passing_tests": n_passing, 
+            "number_failing_tests": n_errors, 
+            "number_missing_rules": n_missing_rules
+        }
 
 
 def validate_test_json_schema(test_json_path):
