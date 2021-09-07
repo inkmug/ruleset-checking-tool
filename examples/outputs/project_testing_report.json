@@ -283,26 +283,8 @@
                         },
                         {
                             "calc_vals": {
-                                "space_lighting_power_user": 1100.0,
-                                "space_lighting_power_proposed": 1100.0
-                            },
-                            "result": "PASSED",
-                            "id": 2,
-                            "name": "Space 2"
-                        },
-                        {
-                            "calc_vals": {
-                                "space_lighting_power_user": 41.0,
-                                "space_lighting_power_proposed": 41.0
-                            },
-                            "result": "PASSED",
-                            "id": 1,
-                            "name": "Space 1"
-                        },
-                        {
-                            "calc_vals": {
-                                "space_lighting_power_user": 1100.0,
-                                "space_lighting_power_proposed": 1100.0
+                                "space_lighting_power_user": 110.0,
+                                "space_lighting_power_proposed": 110.0
                             },
                             "result": "PASSED",
                             "id": 2,
